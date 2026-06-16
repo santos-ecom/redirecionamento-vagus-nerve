@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vagus Nerve</title>
+  <style>
+    body { margin: 0; background: #fff; }
+  </style>
+  <script>
+    (function () {
+      var redirects = {
+        "holandes":    "https://forseniors.shop/pages/vagus-holandes",
+        "polones":     "https://forseniors.shop/pages/vagus-polones",
+        "esloveno":    "https://forseniors.shop/pages/vagus-esloveno",
+        "sueco":       "https://forseniors.shop/pages/vagus-sueco",
+        "tcheco":      "https://forseniors.shop/pages/vagus-tcheco",
+        "hungaro":     "https://forseniors.shop/pages/vagus-hungaro",
+        "grego":       "https://forseniors.shop/pages/vagus-grego",
+        "romeno":      "https://forseniors.shop/pages/vagus-romeno",
+        "eslovaco":    "https://forseniors.shop/pages/vagus-eslovaco",
+        "croata":      "https://forseniors.shop/pages/vagus-croata",
+        "bulgaro":     "https://forseniors.shop/pages/vagus-bulgaro",
+        "finlandes":   "https://forseniors.shop/pages/vagus-finlandes",
+        "estoniano":   "https://forseniors.shop/pages/vagus-estoniano",
+        "turco":       "https://forseniors.shop/pages/vagus-turco",
+        "dinamarques": "https://forseniors.shop/pages/vagus-dinamarques",
+        "noruegues":   "https://forseniors.shop/pages/vagus-noruegues",
+        "italiano":    "https://forseniors.shop/pages/vagus-italiano",
+        "frances":     "https://forseniors.shop/pages/vagus-frances",
+        "alemao":      "https://forseniors.shop/pages/vagus-alemao",
+        "hebraico":    "https://lifeeasyebooks.shop/pages/vagus-hebraico",
+        "ucraniano":   "https://lifeeasyebooks.shop/pages/vagus-ucraniano",
+        "russo":       "https://lifeeasyebooks.shop/pages/vagus-russo",
+        "japones":     "https://lifeeasyebooks.shop/pages/vagus-japones",
+        "coreano":     "https://lifeeasyebooks.shop/pages/vagus-coreano",
+        "bielorusso":  "https://lifeeasyebooks.shop/pages/vagus-bielorusso",
+        "bosnio":      "https://lifeeasyebooks.shop/pages/vagus-bosnio",
+        "lituano":     "https://lifeeasyebooks.shop/pages/vagus-lituano",
+        "servio":      "https://lifeeasyebooks.shop/pages/vagus-servio",
+        "georgiano":   "https://lifeeasyebooks.shop/pages/vagus-georgiano",
+        "letao":       "https://lifeeasyebooks.shop/pages/vagus-letao",
+        "ingles":      "https://lifeeasyebooks.shop/pages/vagus-ingles"
+      };
+
+      // Get the path, stripping leading slash and trailing slash
+      var path = window.location.pathname.replace(/^\/|\/$/g, "").toLowerCase();
+
+      // Handle GitHub Pages SPA redirect from 404.html
+      var search = window.location.search;
+      if (search.indexOf("?p=") === 0) {
+        path = search.slice(3).replace(/^\/|\/$/g, "").toLowerCase();
+      }
+
+      if (path && redirects[path]) {
+        window.location.replace(redirects[path]);
+      }
+      // If no match or root "/", stay blank — do nothing
+    })();
+  </script>
+</head>
+<body></body>
+</html>
