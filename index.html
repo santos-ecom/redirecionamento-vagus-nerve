@@ -54,7 +54,22 @@
       }
 
       if (path && redirects[path]) {
-        window.location.replace(redirects[path]);
+        var destination = redirects[path];
+
+        // Capture query params from the current URL (UTMs etc.)
+        var currentParams = new URLSearchParams(window.location.search);
+
+        // Remove the "?p=" param used by GitHub Pages 404 SPA redirect
+        currentParams.delete("p");
+
+        var queryString = currentParams.toString();
+
+        if (queryString) {
+          // Append params to destination, respecting existing query string
+          destination += (destination.indexOf("?") !== -1 ? "&" : "?") + queryString;
+        }
+
+        window.location.replace(destination);
       }
       // If no match or root "/", stay blank — do nothing
     })();

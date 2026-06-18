@@ -1,10 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0;url=https://forseniors.shop/pages/vagus-italiano" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecionando...</title>
-  <script>window.location.replace("https://forseniors.shop/pages/vagus-italiano");</script>
+  <script>
+    (function () {
+      var destination = "https://forseniors.shop/pages/vagus-italiano";
+      var params = new URLSearchParams(window.location.search);
+      var queryString = params.toString();
+      if (queryString) {
+        destination += (destination.indexOf("?") !== -1 ? "&" : "?") + queryString;
+      }
+      window.location.replace(destination);
+    })();
+  </script>
 </head>
 <body></body>
 </html>
